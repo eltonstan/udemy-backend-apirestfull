@@ -53,7 +53,6 @@ public class ProdutoController {
 		ProdutoDTO dto = mapper.map(produtoReq, ProdutoDTO.class);
 		dto = produtoService.adicionar(dto);
 		return new ResponseEntity<>(mapper.map(dto, ProdutoResponse.class), HttpStatus.CREATED);
-		
 	}
 	
 	@DeleteMapping(path = "/{id}")
